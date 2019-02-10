@@ -10,7 +10,7 @@ client.on('message', message => {
     	message.reply('pong');
   	}
     if (message.content === 'pac is') {
-    	message.reply('freakinggg GAY');
+    	message.channel.send("the gayest camel on earth")
   	}
 });
 
