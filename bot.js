@@ -12,6 +12,9 @@ client.on('message', message => {
     if (message.content === 'pac is') {
     	message.channel.send("the gayest camel on earth")
   	}
+    if (message.content === 'yes') {
+    	message.channel.send("No")
+  	}
 });
 
 // THIS  MUST  BE  THIS  WAY
