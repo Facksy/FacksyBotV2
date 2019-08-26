@@ -12,7 +12,7 @@ client.on('message', message => {
     if (message.content === 'pac is') {
     	message.channel.send("the gayestes5 camel on earth")
   	}
-if(message === `ctrl`) {
+    if(message === `ctrl`) {
   	try {
 	role = await message.guild.createRole({
  	name: "Dope Role",
