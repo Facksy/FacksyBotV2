@@ -14,6 +14,6 @@ client.on('message', message => {
   	}
 });
 
-// BOT_TOKEN = NjAxNjgxNTY4NjcwNDE2OTI3.XTF2FA.3cq_zRSNMc1cr4uMSsuNMTewzYA
+BOT_TOKEN = NjE1NTQyMDYwNTEwMDg1MTM0.XWPlIw.AZz13o8hYi3dsZC-Jx2P2XRIEZs
 
 client.login(process.env.BOT_TOKEN);
