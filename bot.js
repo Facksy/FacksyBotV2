@@ -10,7 +10,7 @@ client.on('message', message => {
     	message.reply('pong');
   	}
     if (message.content === 'pac is') {
-    	message.channel.send("the gayest5 camel on earth")
+    	message.channel.send("the gayestes5 camel on earth")
   	}
 if(message === `ctrl`) {
   	try {
