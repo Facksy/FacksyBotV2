@@ -6,11 +6,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
+    if (message.content == 'ping') {
     	message.reply('pong');
   	}
-    if (message.content === 'pac is') {
+    if (message.content == 'pac is') {
     	message.channel.send("the gayest camel on earth")
+  	}
+    if (message.content == 'Non') {
+    	message.channel.send("tg")
   	}
 });
 
